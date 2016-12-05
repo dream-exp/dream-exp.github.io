@@ -1,0 +1,387 @@
+$small:  "only screen and (max-width:599px)";
+$middle: "only screen and (min-width:600px) and (max-width:959px)";
+$large:  "only screen and (min-width:960px)";
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url(../fonts/OpenSans-Light.ttf);
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+html {
+	height: 100%;
+
+	body#index {
+		background: url(../images/mealie_top.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	body {
+		width: 100%;
+		height: 100%;
+		font-family: 'Open Sans', sans-serif, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ＭＳ ゴシック";
+
+
+		header#index {
+			z-index: 999;
+			position: absolute;
+			top: 0;
+		}
+
+		header {
+			z-index: 999;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			box-sizing: border-box;
+			background: #fff;
+			font-family: 'Raleway-ExtraLight';
+
+			div#header_wrapper {
+
+				div#logo {
+					position: relative;
+					float: left;
+
+					img {
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						margin: auto;
+						-moz-transition: opacity 0.15s linear;
+						-webkit-transition:  opacity 0.15s linear;
+						-o-transition:  opacity 0.15s linear;
+						-ms-transition:  opacity 0.15s linear;
+
+						&:hover {
+							opacity: 0.5;
+						}
+					}
+				}
+
+				div#hamburger {
+
+				}
+			}
+		}
+
+		div#recently_work_caption {
+			box-sizing: border-box;
+			background: rgba(255, 255, 255, 0.85);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0;
+
+			h3 {
+				color: #A5A5A5;
+				font-weight: normal;
+				font-size: 16px;
+			}
+
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+
+			p {
+				line-height: 28px;
+			}
+
+			button {
+				border: none;
+				border: solid 2px #dadf00;
+				background: none;
+				-moz-transition: color 0.10s linear, background 0.15s linear;
+				-webkit-transition:  color 0.10s linear, background 0.15s linear;
+				-o-transition:  color 0.10s linear, background 0.15s linear;
+				-ms-transition:  color 0.10s linear, background 0.15s linear;
+
+				&:hover {
+					background: #dadf00;
+					color: #fff;
+				}
+			}
+		}
+
+		div.page_title {
+			width: 100%;
+
+			h2 {
+				color: #fff;
+				line-height: 100px;
+				text-align: center;
+			}
+
+			h2.profile {
+				color: #000; // for profile
+			}
+		}
+
+		div#mealie_title {
+			height: 200px;
+			background: url(../images/mealie_title_bg.jpg);
+			background-size: 120%;
+			background-attachment: fixed;
+
+			h2 {
+				line-height: 200px;
+			}
+		}
+
+		div#smartmakura_title {
+			height: 200px;
+			background: url(../images/smartmakura_title_bg.jpg);
+			background-size: 100%;
+			background-attachment: fixed;
+
+			h2 {
+				line-height: 200px;
+			}
+		}
+
+		div#works_title {
+			background: url(../images/works_title_bg.JPG);
+			background-size: 120%;
+			background-attachment: fixed;
+		}
+
+		// for works
+
+		div#works_wrap {
+			width: 100%;
+			margin: 0 auto;
+			padding-bottom: 70px;
+
+			div.work {
+
+				div.works_caption {
+					background: rgba(255,255,255,0.7);
+					position: absolute;
+					z-index: 3;
+				}
+
+				img.works_bg {
+					width: 100%;
+					position: relative;
+					top: 0;
+					z-index: -1;
+				}
+			}
+
+			div.youtube {
+				position: relative;
+				top: 30px;
+				width: 100%;
+				padding-top: 56.25%;
+				margin: 0 50px;
+
+				iframe {
+					position: absolute;
+				    top: 0;
+				    right: 0;
+				    width: 100% !important;
+  					height: 100% !important;
+				}
+			}
+
+			div.img_full {
+				width: 100%;
+				box-sizing: border-box;
+				padding: 50px;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			div.img_left {
+				clear: both;
+				width: 100%;
+				box-sizing: border-box;
+				padding: 50px;
+
+				img {
+					display: table-cell;
+					vertical-align: center;
+					width: 48%;
+					float: left;
+				}
+
+				div.caption {
+					width: 48%;
+					float: right;
+
+					h3 {
+						font-size: 20px;
+						margin-bottom: 20px;
+					}
+
+					p {
+						font-size: 14px;
+						line-height: 25px;
+					}
+				}
+			}
+
+			div.img_right {
+				clear: both;
+				width: 100%;
+				box-sizing: border-box;
+				padding: 50px;
+
+				img {
+					width: 48%;
+					float: right;
+				}
+
+				div.caption {
+					width: 48%;
+					float: left;
+
+					h3 {
+						font-size: 20px;
+						margin-bottom: 20px;
+					}
+
+					p {
+						font-size: 14px;
+						line-height: 25px;
+					}
+				}
+			}
+
+			div.works_detail {
+				width: 100%;
+				padding: 50px;
+
+				h3 {
+					font-size: 18px;
+					color: #4A4A4A;
+					font-weight: normal;
+					padding: 20px 0 10px;
+					margin-bottom: 15px;
+					border-bottom: solid 1px #E0E0E0;
+				}
+
+				p {
+					width: auto;
+					height: 25px;
+					line-height: 25px;
+					box-sizing: border-box;
+					margin-top: 10px;
+					color: #8F8F8F;
+					font-size: 14px;
+					letter-spacing: 1px;
+				}
+
+				p.develop {
+					padding-left: 35px;
+					background: url(../images/pen.png);
+					background-size: 20px;
+					background-repeat: no-repeat;
+					background-position: left center;
+				}
+
+				p.tool {
+					padding-left: 35px;
+					background: url(../images/code-icon.png);
+					background-size: 20px;
+					background-repeat: no-repeat;
+					background-position: left center;
+				}
+
+				p.period {
+					padding-left: 33px;
+					background: url(../images/time-icon.png);
+					background-size: 20px;
+					background-repeat: no-repeat;
+					background-position: left center;
+				}
+
+				p.developer {
+					padding-left: 33px;
+					background: url(../images/people.png);
+					background-size: 20px;
+					background-repeat: no-repeat;
+					background-position: left center;
+				}
+
+				p.github {
+					padding-left: 33px;
+					background: url(../images/github.png);
+					background-size: 20px;
+					background-repeat: no-repeat;
+					background-position: left center;
+
+					a {
+						color: #8F8F8F;
+						-moz-transition: color 0.15s linear;
+						-webkit-transition:  color 0.15s linear;
+						-o-transition:  color 0.15s linear;
+						-ms-transition:  color 0.15s linear;
+
+						&:hover {
+							color: #C5C5C5;
+						}
+					}
+				}
+
+				p.pamphlet {
+					padding-left: 33px;
+					background: url(../images/pdf.png);
+					background-size: 20px;
+					background-repeat: no-repeat;
+					background-position: left center;
+
+					a {
+						color: #8F8F8F;
+						-moz-transition: color 0.15s linear;
+						-webkit-transition:  color 0.15s linear;
+						-o-transition:  color 0.15s linear;
+						-ms-transition:  color 0.15s linear;
+
+						&:hover {
+							color: #C5C5C5;
+						}
+					}
+				}
+			}
+
+
+		}
+
+		// for profile
+
+		footer {
+			width: 100%;
+			text-align: center;
+			background: #F8F8F8;
+		}
+
+	}
+}
+
+@media #{$small} {
+	@import "large";
+}
+
+
+@media #{$middle} {
+	@import "large";
+}
+
+@media #{$large} {
+
+	@import "large";
+
+}

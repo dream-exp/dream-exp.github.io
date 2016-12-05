@@ -1,0 +1,4 @@
+html body header {
+  height: 50px; }
+  html body header div#header_wrapper ul {
+    display: none; }
