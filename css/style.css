@@ -155,6 +155,10 @@ html {
           html body div#works_wrap div.img_left div.caption p {
             font-size: 14px;
             line-height: 25px; }
+          html body div#works_wrap div.img_left div.caption a {
+            display: block;
+            margin: 20px 0;
+            color: #409c31; }
       html body div#works_wrap div.img_right {
         clear: both;
         width: 100%;
