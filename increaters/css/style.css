@@ -32,10 +32,14 @@ div.jumbotron {
   position: relative; }
   @media screen and (max-width: 767px) {
     div.jumbotron {
-      height: 60rem; } }
+      height: 55rem;
+      padding-bottom: 0;
+      margin-bottom: 0; } }
   @media screen and (min-width: 768px) {
     div.jumbotron {
-      height: 70rem; } }
+      height: 65rem;
+      padding-bottom: 0;
+      margin-bottom: 0; } }
   div.jumbotron div.top-caption {
     width: 80%;
     left: -10%;
