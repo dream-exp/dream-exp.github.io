@@ -63,5 +63,13 @@ div.container h2 {
   background-size: 80px;
   border-radius: 50vmax; }
 
+@media screen and (max-width: 767px) {
+  div.container h2 {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 60px;
+    background-size: 50px;
+    font-size: 2rem; } }
+
 div.container h2.q-headline {
   background-image: url(../images/q-headline.png); }
