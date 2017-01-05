@@ -1,7 +1,7 @@
 $(document).ready(function() {
   console.log("test");
-  $('p.caption').animate({
-    left: '100px',
+  $('div.top-caption').animate({
+    left: '20px',
     opacity: 1.0
-  }, 1500);
+  }, 800);
 });
