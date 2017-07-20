@@ -43,7 +43,7 @@ class Translater extends React.Component {
   render() {
     return (
       <div>
-        <textarea type="textarea" value={this.state.inputText} onChange={this.onChangeText} />
+        <textarea placeholder="ここに英文を入力" type="textarea" value={this.state.inputText} onChange={this.onChangeText} />
         <div className="buttons">
           <button className="clear" onClick={this.textClear}>Clear</button>
           <button className="shaping" onClick={this.textShapner}>Shaping!</button>
