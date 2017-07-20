@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- React.js, JSX変換, アプリの3つを読み込む -->
+    <script src="http://fb.me/react-0.13.0-rc1.min.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.13.0-rc1.js"></script>
+    <script src="app.jsx" type="text/jsx;harmony=true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.8/clipboard.min.js"></script>
+
+
+    <style type="text/css">
+
+    html, body, main {
+      /*height: 100vh;*/
+    }
+
+    div#app-container div {
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    div#app-container div textarea {
+      width: 100%;
+      height: 30vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: solid 1px rgb(190, 190, 190);
+      border-radius: 3px;
+    }
+
+    div#app-container div div {
+      display: flex;
+      flex-direction: row;
+    }
+
+    div#app-container div div button {
+      width: 180px;
+      height: 40px;
+      margin: 25px 20px 10px;
+      border: none;
+      border-bottom: solid 2px rgb(25, 86, 89);
+      background: none;
+      background-color: rgb(43, 140, 145);
+      color: rgb(255, 255, 255);
+    }
+
+    div#app-container div textarea.outputText {
+      width: 100%;
+      font-size: 11px;
+    }
+
+    div#app-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    </style>
+</head>
+<body>
+
+<div id="app-container"></div>
+
+</body>
+</html>
