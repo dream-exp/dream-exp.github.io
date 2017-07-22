@@ -8,7 +8,6 @@ class Translater extends React.Component {
     };
 
     this.onChangeText = this.onChangeText.bind(this);
-    this.textShapner = this.textShapner.bind(this);
     this.textClear = this.textClear.bind(this);
 
     let clipboard = new Clipboard('.copy');
@@ -22,15 +21,7 @@ class Translater extends React.Component {
 
   onChangeText(e) {
     this.setState({ inputText: e.target.value });
-    this.textShapner();
-  }
-
-  textShapner() {
-    let text = this.state.inputText.replace(/-\s/g, "");
-    text = text.replace(/-\n/g, "")
-    text = text.replace(/\n/g, "");
-    this.setState({ outputText: text });
-    console.log(this.state.outputText);
+    this.setState({ outputText: e.target.value.replace(/-\s/g, " ").replace(/-\n/g, " ").replace(/\n/g, " ") })
   }
 
   textClear() {
@@ -43,13 +34,9 @@ class Translater extends React.Component {
   render() {
     return (
       <div>
-        <textarea placeholder="ここに英文を入力" type="textarea" value={this.state.inputText} onChange={this.onChangeText} />
-        <div className="buttons">
-          <button className="clear" onClick={this.textClear}>Clear</button>
-          <button className="shaping" onClick={this.textShapner}>Shaping!</button>
+        <textarea placeholder="ここに英文を入力" type="textarea" value={this.state.inputText} onChange={this.onChangeText}/>
         <button className="copy" data-clipboard-target=".outputText" onClick={this.textClear}>Copy!</button>
-        </div>
-        <textarea className="outputText" value={this.state.outputText}/>
+        <textarea placeholder="ここに整形後のテキストが出力されます" className="outputText" value={this.state.outputText}/>
       </div>
     );
   }
