@@ -21,7 +21,7 @@ class Translater extends React.Component {
 
   onChangeText(e) {
     this.setState({ inputText: e.target.value });
-    this.setState({ outputText: e.target.value.replace(/-\s/g, " ").replace(/-\n/g, " ").replace(/\n/g, " ") })
+    this.setState({ outputText: e.target.value.replace(/-\s/g, "").replace(/-\n/g, "").replace(/\n/g, " ") })
   }
 
   textClear() {
