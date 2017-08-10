@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script
+  src="http://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <title>LightField</title>
+  <script>
+  $(function() {
+    $("#slider").on("input", function () {
+      var filename = "dst/output_ap" + $(this).val() + "_fl10.png"
+        console.log(filename)
+        $("img").attr("src", filename)
+    });
+  });
+
+  </script>
+  <style>
+  img {
+    width: 450px;
+    height: 600px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  input {
+    display: block;
+    margin: 20px auto;
+  }
+  </style>
+</head>
+<body>
+  <img src="dst/output_ap10_fl10.png">
+  <input type="range" id="slider" name="aperture" step="10" min="10" max="90" value="10">
+</body>
+</html>
