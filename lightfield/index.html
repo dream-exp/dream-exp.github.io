@@ -10,9 +10,28 @@
   crossorigin="anonymous"></script>
   <title>LightField</title>
   <script>
+  
+  aperture = 70;
+  focus = 11
+
   $(function() {
-    $("#slider").on("input", function () {
-      var filename = "dst/output_ap" + $(this).val() + "_fl10.png"
+    // for(var i; i < 100; i += 10) {
+      for(var j; j <= 90; j += 1) {
+        // $("body").append('<img id="hidden src="dst/output_ap' + i + '_fl' + j + '.png">');
+        $("body").append('<img id="hidden" src="dst/output_ap70_fl' + j + '.jpeg">');
+      }
+    // }
+
+    // $("#aperture").on("input", function () {
+    //   aperture = $(this).val();
+    //   var filename = "dst/output_ap" + aperture + "_fl" + focus + ".png"
+    //     console.log(filename)
+    //     $("img#show").attr("src", filename)
+    // });
+
+    $("#focus").on("input", function () {
+      focus = $(this).val();
+      var filename = "dst/output_ap" + aperture + "_fl" + focus + ".jpeg"
         console.log(filename)
         $("img#show").attr("src", filename)
     });
@@ -30,7 +49,7 @@
   }
 
   img {
-    width: 450px;
+    width: 600px;
     height: 600px;
     display: block;
     margin: 0 auto;
@@ -47,15 +66,8 @@
   </style>
 </head>
 <body>
-  <img id="show" src="dst/output_ap10_fl10.png">
-  <input type="range" id="slider" name="aperture" step="10" min="10" max="90" value="10">
-  <img id="hidden" src="dst/output_ap20_fl10.png">
-  <img id="hidden" src="dst/output_ap30_fl10.png">
-  <img id="hidden" src="dst/output_ap40_fl10.png">
-  <img id="hidden" src="dst/output_ap50_fl10.png">
-  <img id="hidden" src="dst/output_ap60_fl10.png">
-  <img id="hidden" src="dst/output_ap70_fl10.png">
-  <img id="hidden" src="dst/output_ap80_fl10.png">
-  <img id="hidden" src="dst/output_ap90_fl10.png">
+  <img id="show" src="dst/output_ap70_fl10.jpeg">
+  <!-- <input type="range" id="aperture" name="aperture" step="10" min="10" max="90" value="10"> -->
+  <input type="range" id="focus" name="focus" step="1" min="10" max="88" value="1">
 </body>
 </html>
