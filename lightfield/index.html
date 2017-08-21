@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,27 +11,27 @@
   <title>LightField</title>
   <script>
   
-  aperture = 70;
-  focus = 11
+  aperture = 0;
+  focus = -50
 
   $(function() {
-    // for(var i; i < 100; i += 10) {
-      for(var j; j <= 90; j += 1) {
+    for(var i = 0; i < 100; i += 10) {
+      for(var j = -50; j <= 50; j += 5) {
         // $("body").append('<img id="hidden src="dst/output_ap' + i + '_fl' + j + '.png">');
-        $("body").append('<img id="hidden" src="dst/output_ap70_fl' + j + '.jpeg">');
+        $("body").append('<img id="hidden" src="dst/output_ap' + aperture + '_fl' + j + '.jpg">');
       }
-    // }
+    }
 
-    // $("#aperture").on("input", function () {
-    //   aperture = $(this).val();
-    //   var filename = "dst/output_ap" + aperture + "_fl" + focus + ".png"
-    //     console.log(filename)
-    //     $("img#show").attr("src", filename)
-    // });
+    $("#aperture").on("input", function () {
+      aperture = $(this).val();
+      var filename = "dst/output_ap" + aperture + "_fl" + focus + ".jpg"
+        console.log(filename)
+        $("img#show").attr("src", filename)
+    });
 
     $("#focus").on("input", function () {
       focus = $(this).val();
-      var filename = "dst/output_ap" + aperture + "_fl" + focus + ".jpeg"
+      var filename = "dst/output_ap" + aperture + "_fl" + focus + ".jpg"
         console.log(filename)
         $("img#show").attr("src", filename)
     });
@@ -66,8 +66,8 @@
   </style>
 </head>
 <body>
-  <img id="show" src="dst/output_ap70_fl10.jpeg">
-  <!-- <input type="range" id="aperture" name="aperture" step="10" min="10" max="90" value="10"> -->
-  <input type="range" id="focus" name="focus" step="1" min="10" max="88" value="1">
+  <img id="show" src="dst/output_ap0_fl-50.jpg">
+  <input type="range" id="aperture" name="aperture" step="10" min="0" max="90" value="0">
+  <input type="range" id="focus" name="focus" step="5" min="-50" max="50" value="-50">
 </body>
 </html>
