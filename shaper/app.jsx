@@ -34,6 +34,7 @@ class Translater extends React.Component {
   render() {
     return (
       <div>
+        <button className="clear" onClick={this.textClear}><img src="cross.png" /></button>
         <textarea placeholder="ここに英文を入力" type="textarea" value={this.state.inputText} onChange={this.onChangeText}/>
         <button className="copy" data-clipboard-target=".outputText" onClick={this.textClear}>Copy!</button>
         <textarea placeholder="ここに整形後のテキストが出力されます" className="outputText" value={this.state.outputText}/>

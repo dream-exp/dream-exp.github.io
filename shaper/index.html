@@ -49,7 +49,7 @@
       font-size: 11px;
     }
 
-    div#app-container div button {
+    div#app-container div button.copy {
       width: 100%;
       height: 40px;
       margin: 20px 0;
@@ -61,8 +61,26 @@
       color: rgb(255, 255, 255);
     }
 
-    div#app-container div button:hover {
+    div#app-container div button.copy:hover {
       background-color: rgb(23, 120, 125);
+    }
+
+    div#app-container div button.clear {
+      position: absolute;
+      background: none;
+      border: none;
+      width: 40px;
+      height: 40px;
+      right: 40px;
+      top: 40px;
+    }
+
+    div#app-container div button.clear img {
+      width: 100%;
+    }
+
+    div#app-container div button.clear:hover {
+      opacity: 0.8;
     }
 
     div#app-container div textarea.outputText {
