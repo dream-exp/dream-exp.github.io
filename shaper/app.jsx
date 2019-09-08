@@ -39,7 +39,7 @@ class Translater extends React.Component {
         <button className="clear" onClick={this.textClear}><img src="cross.png" /></button>
         <textarea placeholder="ここに英文を入力" type="textarea" value={this.state.inputText} onChange={this.onChangeText}/>
         <div id="button_wrapper">
-          <button className="translate"><a href={this.state.translateUrl}>Google翻訳で翻訳する</a></button>
+          <button className="translate"><a href={this.state.translateUrl} target="_blank" rel="noopener noreferrer">Google翻訳で翻訳する</a></button>
           <button className="copy" data-clipboard-target=".outputText" onClick={this.textClear}>Copy!</button>
         </div>
         <textarea placeholder="ここに整形後のテキストが出力されます" className="outputText" value={this.state.outputText}/>
