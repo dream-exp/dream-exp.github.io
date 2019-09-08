@@ -49,19 +49,45 @@
       font-size: 11px;
     }
 
-    div#app-container div button.copy {
+    div#app-container div div#button_wrapper {
       width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    div#app-container div div button.copy, div#app-container div div button.translate {
+      flex: 1;
       height: 40px;
-      margin: 20px 0;
+      /* margin: 0 40px; */
+      font-size: 17px;
       border: none;
       border-radius: 3px;
       border-bottom: solid 2px rgb(25, 86, 89);
       background: none;
-      background-color: rgb(43, 140, 145);
       color: rgb(255, 255, 255);
     }
 
+    div#app-container div div button.copy {
+      background-color: rgb(82, 82, 82);
+      margin-left: 15px;
+    }
+
     div#app-container div button.copy:hover {
+      background-color: rgb(58, 58, 58);
+    }
+
+    div#app-container div div button.translate  {
+      background-color: rgb(43, 140, 145);
+      margin-right: 15px;
+    }
+
+    div#app-container div div button.translate a {
+      display: block;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+
+    div#app-container div button.translate:hover {
       background-color: rgb(23, 120, 125);
     }
 
