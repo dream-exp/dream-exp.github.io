@@ -16,17 +16,19 @@
     <script src="http://fb.me/react-0.13.0-rc1.min.js"></script>
     <script src="http://fb.me/JSXTransformer-0.13.0-rc1.js"></script>
     <script src="app.jsx" type="text/jsx;harmony=true"></script>
+    <script src="credit.jsx" type="text/jsx;harmony=true"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.8/clipboard.min.js"></script>
 
 
     <style type="text/css">
 
     html, body, main {
-      /*height: 100vh;*/
+      /* height: 90vh; */
     }
 
     div#app-container {
       box-sizing: border-box;
+      height: 90vh;
     }
 
     div#app-container div {
@@ -121,9 +123,65 @@
       justify-content: center;
       align-items: center;
     }
+
+    div#credit-container div#modal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 99;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div#modal > div {
+      width: 600px;
+      height: 400px;
+      padding: 30px;
+      background: #fff;
+    }
+
+    div#modal > div > div {
+      margin: 20px 0 40px;
+    }
+
+    div#modal div button {
+      display: block;
+      font-size: 16px;
+      width: 350px;
+      height: 40px;
+      margin: 0 auto;
+    }
+
+    div#modal div div p {
+      font-size: 14px;
+      margin: 0;
+      margin-bottom: 5px;
+    }
+
+    div#modal div div p.head {
+      width: 100%;
+      font-size: 18px;
+      border-bottom: solid 2px #bbb;
+      padding-bottom: 5px;
+      margin: 0 0 20px;
+    }
+
+    div#footlink {
+      display: inline;
+      cursor: pointer;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      text-decoration-line: underline;
+    }
     </style>
 </head>
 <body>
 <div id="app-container"></div>
+<div id="credit-container"></div>
 </body>
 </html>
