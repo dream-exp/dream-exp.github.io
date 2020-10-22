@@ -33,6 +33,11 @@ class Credit extends React.Component {
                             <p>Amazonギフトコードによる投げ銭を受け付けております。<br /><a href="https://www.amazon.co.jp/Amazon%E3%82%AE%E3%83%95%E3%83%88%E5%88%B8-E%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%97/dp/BT00DHI8G4">こちらのリンク</a>より、15円以上の任意の金額から送付可能です。<br />受取人のEメールアドレス欄には dreamexp834@gmail.com をご記入ください。
                             </p>
                         </div>
+			            <div>
+                            <p className="analytics-description">当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を使用しています。このGoogleアナリティクスはデータの収集のためにCookieを使用しています。このデータは匿名で収集されており、個人を特定するものではありません。
+                            この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。この規約に関しての詳細は<a href="https://marketingplatform.google.com/about/analytics/terms/jp/">Googleアナリティクスサービス利用規約のページ</a>や<a href="https://policies.google.com/technologies/ads?hl=ja">Googleポリシーと規約ページ</a>をご覧ください。
+                            </p>
+			            </div>
                         <button className="close" onClick={this.handleClick}>閉じる</button>
                     </div>
                 </div>
