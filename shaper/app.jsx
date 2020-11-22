@@ -40,7 +40,7 @@ class Translater extends React.Component {
         <textarea placeholder="ここに英文を入力" type="textarea" value={this.state.inputText} onChange={this.onChangeText}/>
         <p class="update_message">2020/11/22 Update：翻訳URLをGoogleからDeepLに変更しました。上部エリアにテキストを貼り付けた後、「DeepLで翻訳する」ボタンを押すと、そのままDeepLで翻訳されます。</p>
         <div id="button_wrapper">
-          <button className="translate"><a href={this.state.translateUrl} target="_blank" rel="noopener noreferrer">DeepLで翻訳する</a></button>
+          <button className="translate" onClick={this.textClear}><a href={this.state.translateUrl} target="_blank" rel="noopener noreferrer">DeepLで翻訳する</a></button>
           <button className="copy" data-clipboard-target=".outputText" onClick={this.textClear}>Copy!</button>
         </div>
         <textarea placeholder="ここに整形後のテキストが出力されます" className="outputText" value={this.state.outputText}/>
