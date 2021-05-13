@@ -23,7 +23,7 @@ class Translater extends React.Component {
   onChangeText(e) {
     this.setState({ inputText: e.target.value });
     this.setState({ outputText: e.target.value.replace(/-\s/g, "").replace(/-\n/g, "").replace(/\n/g, " ") })
-    this.setState({ translateUrl: "https://www.deepl.com/translator#en/ja/" + e.target.value.replace(/-\s/g, "").replace(/-\n/g, "").replace(/\n/g, " ").replace(/%/g, "％") })
+    this.setState({ translateUrl: "https://www.deepl.com/translator#en/ja/" + e.target.value.replace(/-\s/g, "").replace(/-\n/g, "").replace(/\n/g, " ").replace(/%/g, "％").replace(/\//g, "／") })
   }
 
   textClear() {
