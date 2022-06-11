@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126650763-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-126650763-3');
+    </script>
+    <meta charset="UTF-8">
+    <title>Shaper</title>
+    <!-- React.js, JSX変換, アプリの3つを読み込む -->
+    <script src="https://fb.me/react-0.13.0-rc1.min.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.0-rc1.js"></script>
+    <script src="app.jsx" type="text/jsx;harmony=true"></script>
+    <script src="credit.jsx" type="text/jsx;harmony=true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.8/clipboard.min.js"></script>
+
+
+    <style type="text/css">
+
+    html, body, main {
+      /* height: 90vh; */
+    }
+
+    div#app-container {
+      box-sizing: border-box;
+      height: 90vh;
+    }
+
+    div#app-container div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    div#app-container div p {
+      color: red;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    div#app-container div textarea {
+      width: 100%;
+      height: 36vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: solid 1px rgb(190, 190, 190);
+      border-radius: 3px;
+      font-size: 11px;
+    }
+
+
+
+    div#app-container div div#button_wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    div#app-container div div button.copy, div#app-container div div button.translate {
+      flex: 1;
+      height: 40px;
+      /* margin: 0 40px; */
+      font-size: 17px;
+      border: none;
+      border-radius: 3px;
+      border-bottom: solid 2px rgb(25, 86, 89);
+      background: none;
+      color: rgb(255, 255, 255);
+    }
+
+    div#app-container div div button.copy {
+      background-color: rgb(82, 82, 82);
+      margin-left: 15px;
+    }
+
+    div#app-container div button.copy:hover {
+      background-color: rgb(58, 58, 58);
+      cursor: pointer;
+    }
+
+    div#app-container div div button.translate  {
+      background-color: rgb(43, 140, 145);
+      margin-right: 15px;
+    }
+
+    div#app-container div div button.translate a {
+      display: block;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      height: 40px;
+      line-height: 40px;
+    }
+
+    div#app-container div button.translate:hover {
+      background-color: rgb(23, 120, 125);
+    }
+
+    div#app-container div button.clear {
+      position: absolute;
+      background: none;
+      border: none;
+      width: 40px;
+      height: 40px;
+      right: 40px;
+      top: 40px;
+    }
+
+    div#app-container div button.clear img {
+      width: 100%;
+    }
+
+    div#app-container div button.clear:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    div#app-container div textarea.outputText {
+      width: 100%;
+      font-size: 11px;
+      height: 36vh;
+    }
+
+    div#app-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div#credit-container div#modal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 99;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div#modal > div {
+      width: 600px;
+      height: 400px;
+      padding: 30px;
+      background: #fff;
+    }
+
+    div#modal > div > div {
+      margin: 20px 0 40px;
+    }
+
+    div#modal div button {
+      display: block;
+      font-size: 16px;
+      width: 350px;
+      height: 40px;
+      margin: 0 auto;
+    }
+
+    div#modal div div p {
+      font-size: 14px;
+      margin: 0;
+      margin-bottom: 5px;
+    }
+
+    div#modal div div p.head {
+      width: 100%;
+      font-size: 18px;
+      border-bottom: solid 2px #bbb;
+      padding-bottom: 5px;
+      margin: 0 0 20px;
+    }
+
+    div#modal div div p.analytics-description {
+      font-size: 9px;
+    }
+
+    div#footlink {
+      display: inline;
+      cursor: pointer;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      text-decoration-line: underline;
+    }
+
+    </style>
+</head>
+<body>
+<div id="app-container"></div>
+<div id="credit-container"></div>
+</body>
+</html>

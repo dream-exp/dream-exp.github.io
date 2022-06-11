@@ -1,0 +1,16 @@
+{
+  "name": "paper-shapner",
+  "version": "0.1.0",
+  "description": "paper-shapner",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electron-packager . paper-shapner --platform darwin --arch x64 --icon=icon.ico"
+  },
+  "author": "dream_exp",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.6.11",
+    "selenium-webdriver": "^3.4.0"
+  }
+}
